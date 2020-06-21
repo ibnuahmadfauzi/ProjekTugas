@@ -21,15 +21,23 @@ namespace modul9ibnuu
         {
             Console.WriteLine("ini method 3");
         }
-    }
 
-    class TestMethod
-    {
-        static void Main(string[] args)
+        protected void method4()
         {
-            ContohModifier contohModifier = new ContohModifier();
-            contohModifier.method2();
-            Console.ReadKey();
+            Console.WriteLine("ini method 4");
+        }
+
+        class AnakClassOutside: ContohModifier
+        {
+            public static void Main(string[] args)
+            {
+                AnakClassOutside anakDariLuar = new AnakClassOutside();
+                anakDariLuar.method1();
+                anakDariLuar.method2();
+                anakDariLuar.method3();
+                anakDariLuar.method4();
+                Console.ReadKey();
+            }
         }
     }
 }
